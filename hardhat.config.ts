@@ -5,6 +5,7 @@ import 'dotenv/config'
 import './tasks/block_number'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
+import '@typechain/hardhat'
 
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL || 'https://eth-goerli'
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '0xkey'
@@ -35,7 +36,6 @@ const config: HardhatUserConfig = {
         outputFile: 'gas-report.txt',
         coinmarketcap: COINMARKETCAP_API_KEY,
     },
-
 }
 
 export default config
